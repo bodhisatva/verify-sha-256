@@ -28,7 +28,7 @@ show_progress() {
 show_progress &
 progress_pid=$!
 
-# start progress indicator
+# check file shasum
 file_shasum=$(shasum -a 256 "$file" | awk '{ print $1 }')
 
 # end progress indicator
