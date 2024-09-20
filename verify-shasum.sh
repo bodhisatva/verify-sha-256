@@ -25,7 +25,7 @@ show_progress() {
   printf "Comparing hashes: "
     while true; do
       printf "${YELLOW}#${DEFAULT}"
-      sleep 1
+      sleep 0.5
     done
 }
 
