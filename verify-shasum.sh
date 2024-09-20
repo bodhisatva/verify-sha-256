@@ -2,6 +2,11 @@
 
 # a script to verify the SHA-256 checksum of a file
 
+# define font colors
+YELLOW='\033[33m'
+RED='\033[31m'
+DEFAULT='\033[0m'
+
 # check if two parameters are provided
 if [ "$#" -ne 2 ]; then
   echo -e "\nMissing a parameter"
@@ -19,7 +24,7 @@ file=$2
 show_progress() {
   printf "Comparing hashes: "
     while true; do
-      printf "\e[33m#\e[0m"
+      printf "${YELLOW}#${DEFAULT}"
       sleep 1
     done
 }
@@ -36,7 +41,7 @@ kill $progress_pid
 echo
 
 if [ "$source_shasum" = "$file_shasum" ]; then
- echo -e "\nSHA-256 checksum verification successful: Hash is a match.\n"
+ echo -e "\nSHA-256 checksum verification successful: ${YELLOW}Hash is a match.${DEFAULT}\n"
 else
- echo -e "\nSHA-256 checksum verification failed: The hash does not match.\n" 
+ echo -e "\nSHA-256 checksum verification failed: ${RED}The hash does not match.${DEFAULT}\n" 
 fi
