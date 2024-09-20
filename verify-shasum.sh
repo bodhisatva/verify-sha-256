@@ -9,8 +9,8 @@ DEFAULT='\033[0m'
 
 # check if two parameters are provided
 if [ "$#" -ne 2 ]; then
-  echo -e "\nMissing a parameter"
-  echo -e "Usage: verify-shasum-256 <source_shasum> <file_to_be_verified>\n"
+  echo -e "\n${RED}Missing a parameter${DEFAULT}"
+  echo -e "Usage: verify-shasum-256 ${YELLOW}<source_shasum> <file_to_be_verified>${DEFAULT}\n"
   exit 1
 fi
 
