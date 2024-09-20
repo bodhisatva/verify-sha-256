@@ -17,7 +17,7 @@ file=$2
 
 # function to show progress indicator
 show_progress() {
-  echo -e "\nComparing hashes:\n"
+  printf "Comparing hashes: "
     while true; do
       printf "\e[33m#\e[0m"
       sleep 1
