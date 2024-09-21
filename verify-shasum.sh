@@ -33,6 +33,9 @@ show_progress() {
 show_progress &
 progress_pid=$!
 
+# kill process with control + c
+trap "kill $progress_pid; exit" SIGINT
+
 # check file shasum
 file_shasum=$(shasum -a 256 "$file" | awk '{ print $1 }')
 
