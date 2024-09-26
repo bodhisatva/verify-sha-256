@@ -6,9 +6,9 @@
   </p>
 <br />
 
-A Bash script to verify the SHA-256 checksum of a file. It compares the provided checksum with the calculated checksum of the file.
+A Bash and Python script to verify the SHA-256 checksum of a file. It compares the provided checksum with the calculated checksum of the file.
 
-## Usage
+## Bash Usage
 
 Ensure the script has execute permissions:
 
@@ -32,4 +32,39 @@ To run the script globally, add the file to `/usr/local/bin` and then:
 
 ```bash
 verify-shasum.sh kdd3dfs3asakdd3dfs3asakdd3dfs3asakdd3dfs3asakdd3dfs3asa example-file.txt
+```
+
+## Python Usage
+
+- Python 3.8 or higher
+- `pip` (Python package installer)
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/bodhisatva/verify-sha-256
+   cd python-shasum
+   ```
+2. Create a virtual environment:
+
+```bash
+python3 -m venv <venv_name>
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
+
+3. Install dependencies
+
+```bash
+python3 -m pip install install -r requirements.txt
+```
+
+#### Execute script:
+
+```bash
+./verify-shasum.py --source-shasum <source_shasum> --target-file <file_to_be_verified>
+```
+
+Or
+
+```bash
+./verify-shasum.py -s <source_shasum> -t <file_to_be_verified>
 ```
