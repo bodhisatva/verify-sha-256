@@ -44,10 +44,10 @@ echo
 
 if [ "$source_shasum" = "$file_shasum" ]; then
   echo -e "\nSource shasum: $source_shasum"
-  echo -e "Target shasum:   $file_shasum"
+  echo -e "Target shasum: $file_shasum"
   echo -e "\nSHA-256 checksum verification successful: ${YELLOW}Hash is a match.${DEFAULT}\n"
 else
   echo -e "\nSource shasum: $source_shasum"
-  echo -e "Target shasum:   $file_shasum"
+  echo -e "Target shasum: $file_shasum"
   echo -e "\nSHA-256 checksum verification failed: ${RED}The hash does not match.${DEFAULT}\n" 
 fi
