@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # a script to verify the SHA-256 checksum of a file
 
 # define font colors
@@ -22,7 +21,7 @@ file=$2
 
 # function to show progress indicator
 show_progress() {
-  printf "Comparing hashes: "
+  printf "Calculating shasum: "
     while true; do
       printf "${YELLOW}#${DEFAULT}"
       sleep 0.5
@@ -44,11 +43,11 @@ kill $progress_pid
 echo
 
 if [ "$source_shasum" = "$file_shasum" ]; then
-  echo -e "\nSource hash: $source_shasum"
-  echo -e "File hash:   $file_shasum"
+  echo -e "\nSource shasum: $source_shasum"
+  echo -e "Target shasum: $file_shasum"
   echo -e "\nSHA-256 checksum verification successful: ${YELLOW}Hash is a match.${DEFAULT}\n"
 else
-  echo -e "\nSource hash: $source_shasum"
-  echo -e "File hash:   $file_shasum"
+  echo -e "\nSource shasum: $source_shasum"
+  echo -e "Target shasum: $file_shasum"
   echo -e "\nSHA-256 checksum verification failed: ${RED}The hash does not match.${DEFAULT}\n" 
 fi
