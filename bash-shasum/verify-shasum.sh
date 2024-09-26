@@ -21,7 +21,7 @@ file=$2
 
 # function to show progress indicator
 show_progress() {
-  printf "Comparing hashes: "
+  printf "Calculating shasum: "
     while true; do
       printf "${YELLOW}#${DEFAULT}"
       sleep 0.5
