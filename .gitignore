@@ -1,4 +1,4 @@
 /test-files
 /lib
 /bin
-/shasum-env
+/python-shasum/shasum-env

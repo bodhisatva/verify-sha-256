@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # a script to verify the SHA-256 checksum of a file
 
 # define font colors

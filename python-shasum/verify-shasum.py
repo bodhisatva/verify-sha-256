@@ -5,6 +5,7 @@ import os
 from click import progressbar
 from hashlib import sha256
 
+
 YELLOW='\033[33m'
 RED='\033[31m'
 DEFAULT='\033[0m'
