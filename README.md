@@ -60,11 +60,19 @@ python3 -m pip install -r requirements.txt
 #### Execute script:
 
 ```bash
-./verify-shasum.py --source-shasum <source_shasum> --target-file <file_to_be_verified>
+./verify-shasum.py --source-shasum <source_shasum> --target-file <path/to/target-file>
 ```
 
-Or
+or
 
 ```bash
-./verify-shasum.py -s <source_shasum> -t <file_to_be_verified>
+./verify-shasum.py -s <source_shasum> -t <path/to/target-file>
 ```
+
+or
+
+```bash
+./verify-shasum.py
+```
+
+and provide information for the prompts.
