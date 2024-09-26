@@ -2,7 +2,8 @@
 
 <br />
   <p align="center">
-    <img width="552" alt="sha-cover" src="https://github.com/user-attachments/assets/d43e87fe-8252-4db4-a81a-e06378fb6319">
+    <img width="559" alt="shell-cover" src="https://github.com/user-attachments/assets/c2c2f9b6-ec23-4ed5-a871-6ccd3ae47bfa">
+
   </p>
 <br />
 
@@ -36,28 +37,42 @@ verify-shasum.sh kdd3dfs3asakdd3dfs3asakdd3dfs3asakdd3dfs3asakdd3dfs3asa example
 
 ## Python Usage
 
+<br/>
+  <p align="center">
+    <img width="563" alt="python-cover" src="https://github.com/user-attachments/assets/1867a98e-70f5-4581-8350-f9ed2a1a9d49">
+  </p>
+<br/>
+
 - Python 3.8 or higher
 - `pip` (Python package installer)
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/bodhisatva/verify-sha-256
-   cd python-shasum
-   ```
-2. Create a virtual environment:
+
+```bash
+git clone https://github.com/bodhisatva/verify-sha-256
+cd python-shasum
+```
+
+2. **Create a virtual environment**:
 
 ```bash
 python3 -m venv <venv_name>
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+source venv/bin/activate
 ```
 
-3. Install dependencies
+3. **Install dependencies**
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
 #### Execute script:
+
+Ensure the script has execute permissions:
+
+```bash
+chmod +x verify-shasum.py
+```
 
 ```bash
 ./verify-shasum.py --source-shasum <source_shasum> --target-file <path/to/target-file>
@@ -76,3 +91,9 @@ or
 ```
 
 and provide information for the prompts.
+
+To run the script globally, add the file to `/usr/local/bin` and then:
+
+```bash
+verify-shasum.py
+```
